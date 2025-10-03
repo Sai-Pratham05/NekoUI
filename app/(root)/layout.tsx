@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
- 
+
 export const metadata: Metadata = {
   title: {
     default: 'Acme',
@@ -13,7 +13,8 @@ export default function RootLayout({
   }) {
     return (
       <html lang="en" suppressHydrationWarning={true}>
-        <body suppressHydrationWarning={true}>{children}</body>
+        <body suppressHydrationWarning={true}>
+            {children}</body>
       </html>
     )
   }

@@ -10,7 +10,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-2">
             <div className="text-center space-y-2 mx-auto lg:text-left lg:mx-0">
-              <h1 className="text-[42px] font-medium mb-2 text-balance max-w-3xl mx-auto tracking-tighter lg:mx-0">
+              <h1 className="text-[42px] font-medium mb-2 text-balance max-w-3xl mx-auto tracking-tighter lg:mx-0 text-white">
                 Streamline Your Workflow with Our SaaS Solution
               </h1>
             </div>
