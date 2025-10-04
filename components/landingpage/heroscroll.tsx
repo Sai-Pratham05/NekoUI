@@ -19,7 +19,7 @@ export function HeroScroll() {
         }
       >
         <Image
-          src={``}
+          src={`https://i.postimg.cc/VLWtZZ2x/dashboard2-0.png`}
           alt="hero"
           height={720}
           width={1400}
