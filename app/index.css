@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-destructive-foreground: var(--destructive-foreground);
+}
+
+:root {
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --neon-text-color: #39ff14;
+  --neon-border-color: #00ffff;
+  --neon-intensity: 1;
+}
+
+.dark {
+  --card: oklch(0.145 0 0);
+  --popover: oklch(0.145 0 0);
+  --primary: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+  --neon-text-color: #ff39ff;
+  --neon-border-color: #00ffff;
+  --neon-intensity: 1;
+}
+
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: calc(-0.2rem * var(--neon-intensity, 1)) calc(-0.2rem * var(--neon-intensity, 1)) calc(
+        1rem *
+        var(--neon-intensity, 1)
+      ) #fff,
+      calc(0.2rem * var(--neon-intensity, 1)) calc(0.2rem * var(--neon-intensity, 1)) calc(
+        1rem *
+        var(--neon-intensity, 1)
+      ) #fff,
+      0 0 calc(2rem * var(--neon-intensity, 1)) var(--neon-text-color),
+      0 0 calc(4rem * var(--neon-intensity, 1)) var(--neon-text-color),
+      0 0 calc(6rem * var(--neon-intensity, 1)) var(--neon-text-color),
+      0 0 calc(8rem * var(--neon-intensity, 1)) var(--neon-text-color),
+      0 0 calc(10rem * var(--neon-intensity, 1)) var(--neon-text-color);
+    box-shadow: 0 0 calc(0.5rem * var(--neon-intensity, 1)) #fff,
+      inset 0 0 calc(0.5rem * var(--neon-intensity, 1)) #fff,
+      0 0 calc(2rem * var(--neon-intensity, 1)) var(--neon-border-color),
+      inset 0 0 calc(2rem * var(--neon-intensity, 1)) var(--neon-border-color),
+      0 0 calc(4rem * var(--neon-intensity, 1)) var(--neon-border-color),
+      inset 0 0 calc(4rem * var(--neon-intensity, 1)) var(--neon-border-color);
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@keyframes neon-rgb {
+  0% {
+    --neon-text-color: #ff0000;
+    --neon-border-color: #00ff00;
+  }
+  33% {
+    --neon-text-color: #00ff00;
+    --neon-border-color: #0000ff;
+  }
+  66% {
+    --neon-text-color: #0000ff;
+    --neon-border-color: #ff0000;
+  }
+  100% {
+    --neon-text-color: #ff0000;
+    --neon-border-color: #00ff00;
+  }
+}

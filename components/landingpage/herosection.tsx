@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-
 import { Button } from "@/components/ui/button";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import {AvatarCirclesMain } from "@/components/landingpage/avatarcircles";
 
 export function HeroSection() {
   return (
@@ -9,6 +10,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 py-12 md:py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-2">
+          <AnimatedShinyText>✨Introducing NekoUI</AnimatedShinyText>
             <div className="text-center space-y-2 mx-auto lg:text-left lg:mx-0">
               <h1 className="text-[42px] font-medium mb-2 text-balance max-w-3xl mx-auto tracking-tighter lg:mx-0">
                 Streamline Your Workflow with Our SaaS Solution
@@ -20,8 +22,9 @@ export function HeroSection() {
               software-as-a-service platform.
             </p>
             <div className="flex justify-center lg:justify-start">
-              <Button variant="default">Start Your Free Trial</Button>
+              <Button variant="default" className="cursor-pointer">Get Started</Button>
             </div>
+            <AvatarCirclesMain />
           </div>
           <Image
             alt="Mobile app screenshot"

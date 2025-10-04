@@ -15,9 +15,10 @@ interface NavItem {
 interface NavBarProps {
   items: NavItem[]
   className?: string
+  rightComponent?: React.ReactNode
 }
 
-export function NavBar({ items, className }: NavBarProps) {
+export function NavBar({ items, className, rightComponent }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -79,6 +80,11 @@ export function NavBar({ items, className }: NavBarProps) {
             </Link>
           )
         })}
+        {rightComponent && (
+          <div className="ml-1">
+            {rightComponent}
+          </div>
+        )}
       </div>
     </div>
   )
