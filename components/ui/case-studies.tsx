@@ -1,10 +1,9 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { Monitor, LayoutDashboard, Users } from "lucide-react"; // ✅ Lucide icons
+import { Monitor, LayoutDashboard, Users } from "lucide-react";
 import Image from "next/image";
 
-// Custom CountUp component to replace react-countup
 function CountUp({
   end,
   decimals = 0,
@@ -104,7 +103,7 @@ function parseMetricValue(raw: string) {
   const [, prefix, num, suffix] = m;
   const normalized = num.replace(/,/g, "");
   const end = parseFloat(normalized);
-  const decimals = (normalized.split(".")[1]?.length ?? 0);
+  const decimals = normalized.split(".")[1]?.length ?? 0;
   return {
     prefix: prefix ?? "",
     end: isNaN(end) ? 0 : end,
@@ -172,12 +171,19 @@ export default function Casestudies() {
         "With Neko UI, our design team finally works in sync. Components are reusable, consistent, and we ship new features 40% faster.",
       name: "Aarav Mehta",
       role: "Frontend Engineer",
-      image:
-        "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/dashboard-gradient.png",
+      image: "https://i.postimg.cc/8k3kpkDf/Liquid-Glass.jpg",
       icon: Monitor,
       metrics: [
-        { value: "40%", label: "Faster Delivery", sub: "Feature shipping speed" },
-        { value: "95%", label: "Developer Satisfaction", sub: "Based on internal survey" },
+        {
+          value: "40%",
+          label: "Faster Delivery",
+          sub: "Feature shipping speed",
+        },
+        {
+          value: "95%",
+          label: "Developer Satisfaction",
+          sub: "Based on internal survey",
+        },
       ],
     },
     {
@@ -187,7 +193,7 @@ export default function Casestudies() {
       name: "Sophia Patel",
       role: "Operations Manager",
       image:
-        "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/dashboard-02.png",
+        "https://i.postimg.cc/bYx5w87v/Sleek-AI-Meeting-Tool-Dashboard-for-Modern-Mobile-Apps.jpg",
       icon: LayoutDashboard,
       metrics: [
         { value: "3.5x", label: "Efficiency Gain", sub: "Across workflows" },
@@ -200,12 +206,15 @@ export default function Casestudies() {
         "The collaborative features in Ruixen UI changed the way our team communicates. Everything is more transparent, and onboarding is seamless.",
       name: "David Liu",
       role: "Team Lead",
-      image:
-        "https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/featured-01.png",
+      image: "https://i.postimg.cc/0jkbmPcs/Sales-analytics-UI-design.jpg",
       icon: Users,
       metrics: [
         { value: "2x", label: "Faster Onboarding", sub: "For new hires" },
-        { value: "88%", label: "Collaboration Boost", sub: "Teamwide adoption" },
+        {
+          value: "88%",
+          label: "Collaboration Boost",
+          sub: "Teamwide adoption",
+        },
       ],
     },
   ];
@@ -222,11 +231,12 @@ export default function Casestudies() {
             id="case-studies-heading"
             className="text-4xl font-semibold md:text-5xl text-foreground"
           >
-            Real results with Ruixen UI
+            Build confidently with Neko UI
           </h2>
           <p className="text-muted-foreground">
-            From design systems to operations—Ruixen UI powers teams with speed,
-            clarity, and consistency.
+            Neko UI accelerates development with reliable, responsive
+            components—bringing speed, clarity, and consistency to every
+            interface.
           </p>
         </div>
 
@@ -251,8 +261,8 @@ export default function Casestudies() {
                   <Image
                     src={study.image}
                     alt={`${study.name} portrait`}
-                    width={300}
-                    height={400}
+                    width={310}
+                    height={410}
                     className="aspect-[29/35] h-auto w-full max-w-60 rounded-2xl object-cover ring-1 ring-border hover:scale-105 transition-all duration-300"
                     loading="lazy"
                     decoding="async"
