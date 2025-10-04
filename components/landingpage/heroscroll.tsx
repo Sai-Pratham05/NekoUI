@@ -10,9 +10,11 @@ export function HeroScroll() {
         titleComponent={
           <>
             <h1 className="text-4xl md:text-[6rem] font-bold leading-tight">
-              Ready to Use Component Library<br />
+              Ready to Use Component Library
+              <br />
               <span className="block text-2xl font-semibold text-black dark:text-white mt-2 leading-tight text-center mx-auto max-w-4xl">
-              Neko UI supports startups in rapidly building and launching products with accessible, productivity-driven tools.
+                Neko UI supports startups in rapidly building and launching
+                products with accessible, productivity-driven tools.
               </span>
             </h1>
           </>
