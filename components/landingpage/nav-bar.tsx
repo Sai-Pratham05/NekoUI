@@ -5,10 +5,10 @@ import { ModeToggle } from "@/components/landingpage/modetoggle";
 
 export function NavBarComponent() {
   const navItems = [
-    { name: "Home", url: "#", icon: Home },
-    { name: "About", url: "#", icon: User },
-    { name: "Projects", url: "#", icon: Briefcase },
-    { name: "Resume", url: "#", icon: FileText },
+    { name: "About", url: "#", icon: Home },
+    { name: "Components", url: "#", icon: User },
+    { name: "Templates", url: "#", icon: Briefcase },
+    { name: "Docs", url: "#", icon: FileText },
   ];
 
   return <NavBar items={navItems} rightComponent={<ModeToggle />} />;
