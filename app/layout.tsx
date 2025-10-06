@@ -34,14 +34,16 @@ export default function RootLayout({
           minHeight: "100vh",
         }}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <RootProvider>{children}</RootProvider>
-        </ThemeProvider>
+        <RootProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </RootProvider>
       </body>
     </html>
   );
