@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Monitor, LayoutDashboard, Users } from "lucide-react";
 import Image from "next/image";
+import { NekoHandWritten } from "../nekoui-lib/handwriting/neko-handwriting01";
 
 function CountUp({
   end,
@@ -231,7 +232,7 @@ export default function Casestudies() {
             id="case-studies-heading"
             className="text-4xl font-semibold md:text-5xl text-foreground"
           >
-            Build confidently with Neko UI
+            Neko UI to the <div className="flex flex-col"><NekoHandWritten /></div>
           </h2>
           <p className="text-muted-foreground">
             Neko UI accelerates development with reliable, responsive
