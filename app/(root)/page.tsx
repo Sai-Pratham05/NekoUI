@@ -1,4 +1,5 @@
 "use client";
+import { ReactNode } from "react";
 import { NavBarComponent } from "@/components/landingpage/nav-bar";
 import { HeroSection } from "@/components/landingpage/herosection";
 import GlobeSection from "@/components/landingpage/globe-section";
