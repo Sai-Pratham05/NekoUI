@@ -1,11 +1,11 @@
-import { Github, Twitter, CatIcon } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
 import { Footer } from "@/components/ui/footer";
 
 function FooterMain() {
   return (
     <div className="w-full">
       <Footer
-        logo={<CatIcon className="h-10 w-10" />}
+        logo={<span className="text-2xl">🐱</span>}
         brandName="Neko UI"
         socialLinks={[
           {
