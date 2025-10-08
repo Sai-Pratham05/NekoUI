@@ -1,13 +1,13 @@
 import { FlickeringGrid} from "@/components/flickerring-grid-hero";
-import {LOGO_BASE64} from "@/components/flickerring-grid-demo";
+import {IMAGE} from "@/components/flickerring-grid-demo";
 
 // 定义遮罩样式
 const maskStyle = {
-  WebkitMaskImage: `url('${LOGO_BASE64}')`,
+  WebkitMaskImage: `url('${IMAGE}')`,
   WebkitMaskSize: '100vw',
   WebkitMaskPosition: 'center',
   WebkitMaskRepeat: 'no-repeat',
-  maskImage: `url('${LOGO_BASE64}')`,
+  maskImage: `url('${IMAGE}')`,
   maskSize: '100vw',
   maskPosition: 'center',
   maskRepeat: 'no-repeat',
@@ -17,15 +17,15 @@ const maskStyle = {
 const GRID_CONFIG = {
   background: {
     color: "#6366f1",
-    maxOpacity: 0.08,
-    flickerChance: 0.15,
+    maxOpacity: 0.2,
+    flickerChance: 0.4,
     squareSize: 4,
     gridGap: 4,
   },
   logo: {
     color: "#6366f1",
-    maxOpacity: 0.45,
-    flickerChance: 0.2,
+    maxOpacity: 0.8,
+    flickerChance: 0.5,
     squareSize: 2,
     gridGap: 3,
   },
